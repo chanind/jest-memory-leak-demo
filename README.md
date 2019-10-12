@@ -1,5 +1,7 @@
 # jest-memory-leak-demo
 
+This repo is a companion to an article about Jest memory leaks at https://chanind.github.io/javascript/2019/10/12/jest-tests-memory-leak.html
+
 A demo of a set of tests which leak memory in Jest. To see this repo in action, clone the repo and run `yarn install` to install all dependencies. Then, run `yarn test-with-memory` to see tests run while reporting memory usage. To run the tests with the chrome debugger attached, start the tests using `yarn test-with-memory-and-inspector`.
 
 The `enWords.json` file comes from https://github.com/dwyl/english-words. 
