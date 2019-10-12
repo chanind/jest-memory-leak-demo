@@ -1,20 +1,14 @@
 const express = require("express");
 const geoip = require("geoip-lite");
-const Sentry = require("@sentry/node");
 
-Sentry.init({
-  dsn: "https://44444444444444444444444444444444@sentry.io/7777777"
-});
+// just requiring sentry, not even initializing or using it
+require("@sentry/node");
 
 // big-ish file (7 MB)
 const enWords = require("./enWords.json");
 
 const app = express();
 app.enable("trust proxy");
-
-// sentry for error tracking...
-app.use(Sentry.Handlers.requestHandler());
-app.use(Sentry.Handlers.errorHandler());
 
 app.get("/", (req, res) => {
   res.send("Hello!");
